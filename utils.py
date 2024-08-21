@@ -20,7 +20,7 @@ import numpy as np
 
 import sys
 sys.path.append("C:\\_Uni\\Thesis\\Master Project")
-from LINAC import LINAC
+from INPUTDATA import INPUTDATA
 
 
 # Methods
@@ -87,16 +87,16 @@ def get_all_data_loaders(conf):
         # test_loader_b = get_data_loader_folder(os.path.join(conf['data_root'], 'testB'), batch_size, False,
         #                                      new_size_b, new_size_b, new_size_b, num_workers, True)
         train_loader_a = DataLoader(
-            LINAC(os.path.join(conf['data_root'], 'trainA'), isUNIT=True, transformations=unit_transformations,
+            INPUTDATA(os.path.join(conf['data_root'], 'trainA'), isUNIT=True, transformations=unit_transformations,
                   data_split="train"), batch_size=batch_size, shuffle=True, num_workers=num_workers)
         test_loader_a = DataLoader(
-            LINAC(os.path.join(conf['data_root'], 'testA'), isUNIT=True, transformations=unit_normalize,
+            INPUTDATA(os.path.join(conf['data_root'], 'testA'), isUNIT=True, transformations=unit_normalize,
                   data_split="test"), batch_size=batch_size, shuffle=False, num_workers=num_workers)
         train_loader_b = DataLoader(
-            LINAC(os.path.join(conf['data_root'], 'trainB'), isUNIT=True, transformations=unit_transformations,
+            INPUTDATA(os.path.join(conf['data_root'], 'trainB'), isUNIT=True, transformations=unit_transformations,
                   data_split="train"), batch_size=batch_size, shuffle=True, num_workers=num_workers)
         test_loader_b = DataLoader(
-            LINAC(os.path.join(conf['data_root'], 'testB'), isUNIT=True, transformations=unit_normalize,
+            INPUTDATA(os.path.join(conf['data_root'], 'testB'), isUNIT=True, transformations=unit_normalize,
                   data_split="test"), batch_size=batch_size, shuffle=False, num_workers=num_workers)
 
     else:

@@ -40,7 +40,7 @@ if __name__ == "__main__":
     import shutil
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, default='configs/unit_LINAC_folder.yaml', help='Path to the config file.')
+    parser.add_argument('--config', type=str, default='configs/unit_INPUTDATA_folder.yaml', help='Path to the config file.')
     parser.add_argument('--output_path', type=str, default='.', help="outputs path")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument('--trainer', type=str, default='UNIT', help="MUNIT|UNIT")

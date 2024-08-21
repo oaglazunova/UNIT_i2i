@@ -1,4 +1,4 @@
-# run config script: --config configs/unit_LINAC_folder.yaml --trainer UNIT
+# run config script: --config configs/unit_INPUTDATA_folder.yaml --trainer UNIT
 
 
 if __name__ == "__main__":  # This line ensures that the script's main code block is only executed when the script is

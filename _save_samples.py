@@ -91,7 +91,7 @@ if __name__ == "__main__":
     from utils import get_all_data_loaders, prepare_sub_folder, get_config
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, default='configs/unit_LINAC_folder.yaml',
+    parser.add_argument('--config', type=str, default='configs/unit_INPUTDATA_folder.yaml',
                         help='Path to the config file.')
     parser.add_argument('--output_path', type=str, default='.', help="outputs path")
     parser.add_argument("--resume", action="store_true")
