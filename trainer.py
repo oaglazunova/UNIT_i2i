@@ -9,6 +9,7 @@ import torch
 import torch.nn as nn
 import os
 
+
 class MUNIT_Trainer(nn.Module):
     def __init__(self, hyperparameters):
         super(MUNIT_Trainer, self).__init__()
@@ -243,6 +244,7 @@ class UNIT_Trainer(nn.Module):
         h_b, _ = self.gen_b.encode(x_b)
         x_ba = self.gen_a.decode(h_b)
         x_ab = self.gen_b.decode(h_a)
+
         self.train()
         return x_ab, x_ba
 
@@ -326,6 +328,7 @@ class UNIT_Trainer(nn.Module):
         x_ba = torch.cat(x_ba)
         x_ab = torch.cat(x_ab)
         self.train()
+
         return x_a, x_a_recon, x_ab, x_b, x_b_recon, x_ba
 
     def dis_update(self, x_a, x_b, hyperparameters):
